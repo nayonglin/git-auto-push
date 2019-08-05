@@ -23,6 +23,11 @@ try {
                 return;
             }
 
+            if(stdout == 'nothing to commit, working directory clean') {
+                console.log('工作区没有改动');
+                return;
+            }
+
             console.log('工作树修改啊' + stdout);
             // 添加修改
             exec('git add *', {
@@ -33,11 +38,7 @@ try {
                     console.error(`添加结果exec error: ${error}`);
                     return;
                 }
-                console.log('类型', typeof(stdout));
-                if(stdout == 'nothing to commit, working directory clean') {
-                    console.log('工作区没有改动');
-                    return;
-                }
+              
 
                 console.log('添加结果' + stdout);
                 
