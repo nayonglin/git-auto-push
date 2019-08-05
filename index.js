@@ -23,7 +23,7 @@ try {
                 return;
             }
 
-            if(stdout == 'nothing to commit, working directory clean') {
+            if(stdout[2] == 'nothing to commit, working directory clean') {
                 console.log('工作区没有改动');
                 return;
             }
