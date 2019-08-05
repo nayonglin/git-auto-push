@@ -33,15 +33,21 @@ try {
                     console.error(`添加结果exec error: ${error}`);
                     return;
                 }
+                
+                if(stdout == 'nothing to commit, working directory clean') {
+                    console.log('工作区没有改动');
+                    return;
+                }
 
                 console.log('添加结果' + stdout);
+                
                 // 提交修改
                 exec('git commit -m "提交啊"', {
                     encoding: 'utf8'
                 }, function (error, stdout, stderr) {
 
                     if (error) {
-                        console.error(`提交结果exec error: ${error}`);
+                        console.error(`提交结果exec error: ${error}，大概率是工作区没有变动`);
                         return;
                     }
 
