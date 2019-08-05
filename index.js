@@ -33,7 +33,7 @@ try {
                     console.error(`添加结果exec error: ${error}`);
                     return;
                 }
-                
+                console.log('类型', typeof(stdout));
                 if(stdout == 'nothing to commit, working directory clean') {
                     console.log('工作区没有改动');
                     return;
@@ -47,7 +47,7 @@ try {
                 }, function (error, stdout, stderr) {
 
                     if (error) {
-                        console.error(`提交结果exec error: ${error}，大概率是工作区没有变动`);
+                        console.error(`提交结果exec error: ${error}`);
                         return;
                     }
 
