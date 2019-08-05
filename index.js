@@ -19,7 +19,7 @@ try {
         }, function (error, stdout, stderr) {
 
             if (error) {
-                console.error(`exec error: ${error}`);
+                console.error(`你现在所在分支：exec error: ${error}`);
                 return;
             }
 
@@ -30,7 +30,7 @@ try {
             }, function (error, stdout, stderr) {
 
                 if (error) {
-                    console.error(`exec error: ${error}`);
+                    console.error(`添加结果exec error: ${error}`);
                     return;
                 }
 
@@ -41,7 +41,7 @@ try {
                 }, function (error, stdout, stderr) {
 
                     if (error) {
-                        console.error(`exec error: ${error}`);
+                        console.error(`提交结果exec error: ${error}`);
                         return;
                     }
 
@@ -52,7 +52,7 @@ try {
                     }, function (error, stdout, stderr) {
 
                         if (error) {
-                            console.error(`exec error: ${error}`);
+                            console.error(`push结果exec error: ${error}`);
                             return;
                         }
 
