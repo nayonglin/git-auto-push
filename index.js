@@ -36,7 +36,7 @@ try {
 
                 console.log('添加结果' + stdout);
                 // 提交修改
-                exec('git commit -m "提交"', {
+                exec('git commit -m "提交啊"', {
                     encoding: 'utf8'
                 }, function (error, stdout, stderr) {
 
