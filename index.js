@@ -19,11 +19,11 @@ try {
         }, function (error, stdout, stderr) {
 
             if (error) {
-                console.error(`工作树修改：exec error: ${error}`);
+                console.error(`工作树修改啊：exec error: ${error}`);
                 return;
             }
 
-            console.log('工作树修改' + stdout);
+            console.log('工作树修改啊' + stdout);
             // 添加修改
             exec('git add *', {
                 encoding: 'utf8'
